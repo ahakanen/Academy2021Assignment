@@ -65,13 +65,13 @@ public class ObstacleLogic : MonoBehaviour
 			{
 				tmp.x += 2f;
 				transform.position = tmp;
-				rotationInvert = -1;
+				rotationInvert = -1; // make sure rotation is also correct for each side to avoid impossible obstacles
 			}
 			else
 			{
 				tmp.x -= 2f;
 				transform.position = tmp;
-				rotationInvert = 1;
+				rotationInvert = 1; // make sure rotation is also correct for each side to avoid impossible obstacles
 			}
 		}
 	}
