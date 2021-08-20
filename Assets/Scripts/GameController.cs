@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
 	int score = 0;
 	int bestScore = 0;
 	int scoreMultiplier = 1;
+	public int maxScoreMultiplier = 16;
 	public float scoreMultiplierTimerDuration;
 	float scoreMultiplierTimer;
 	public TextMeshPro scoreText;
@@ -94,11 +95,11 @@ public class GameController : MonoBehaviour
 		Debug.Log("Collision with " + other);
 		if (other.tag == "Obstacle")
 		{
-			if (other.name == "BottomKillBox")
+			if (other.name == "BottomKillBox") // kill player on collision regardless of color if falling off the screen
 			{
 				PlayerDeath();
 			}
-			else
+			else // if obstacle color doesn't match with player color, kill player on collision
 			{
 				SpriteRenderer obstacleRenderer = other.GetComponent<SpriteRenderer>();
 				if (obstacleRenderer && obstacleRenderer.color != spriteRenderer.color)
@@ -114,6 +115,10 @@ public class GameController : MonoBehaviour
 			scoreText.text = "Score: " + score.ToString();
 			scoreMultiplier += 1;
 			scoreMultiplierTimer = 0;
+			if (scoreMultiplier > maxScoreMultiplier) // limit score multiplier to maximum score multiplier
+			{
+				scoreMultiplier = maxScoreMultiplier;
+			}
 			scoreMultiplierText.text = "x" + scoreMultiplier.ToString();
 			Instantiate(playerPickupEffect, transform.position, transform.rotation);
 			objectController.ObjectDespawn(other.gameObject);
