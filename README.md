@@ -14,6 +14,7 @@
 - I skipped making a main menu, as there's currently no features that would require it, and not having one is actually beneficial for testing the basic gameplay.
 - I chose to leave some of the debug text in to make it easier to see what's going on when testing the gameplay.
 - The naming of obstacle pieces is based on the color it appears as in editor, but in game the colors won't match as they are randomized. I chose to leave the naming and coloring as it is, because it helps manage the obstacles in editor/hierarchy/inspector better.
+- Due to the assignment being a prototype, not a finished game, I didn't pay as much effort into finding alternate ways to code something better. "Once stuff works the way it should, as long as it's possible to read the code it's probably good enough for a prototype," is the guideline I followed, optimizing performance and such was secondary.
 
 Features I'd like to add:
 - Main menu
