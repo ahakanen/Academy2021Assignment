@@ -76,6 +76,7 @@ public class ObstacleLogic : MonoBehaviour
 		}
 	}
 
+	// if object should be rebuilt, rebuild the object on despawn
 	public void OnDespawn()
 	{
 		if (shouldRebuild == true)
