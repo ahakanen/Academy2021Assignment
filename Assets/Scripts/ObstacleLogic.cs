@@ -59,7 +59,7 @@ public class ObstacleLogic : MonoBehaviour
 		// set offset if necessary, random between left or right
 		if (shouldOffset == true)
 		{
-			Debug.Log("OFFSETTING OBSTACLE!");
+			Debug.Log("Offsetting obstacle!");
 			Vector3 tmp = transform.position;
 			if (Random.value >= 0.5f)
 			{

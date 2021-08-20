@@ -145,6 +145,7 @@ public class GameController : MonoBehaviour
 		}
 	}
 
+	// if player doesn't reset the timer by gaining score, he will lose his multiplier
 	void UpdateScoreMultiplier()
 	{
 		scoreMultiplierTimer += Time.deltaTime;
