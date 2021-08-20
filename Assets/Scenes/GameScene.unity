@@ -1314,8 +1314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84ecbb3994c76943890d38fbead368a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 9.81
-  jumpHeight: 250
+  gravity: 0.5
+  jumpHeight: 150
   playerColor: 0
   maxScoreMultiplier: 16
   scoreMultiplierTimerDuration: 10

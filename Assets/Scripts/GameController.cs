@@ -14,8 +14,8 @@ public enum PlayerColor
 public class GameController : MonoBehaviour
 {
 	[Header("Physics")]
-	public float gravity = 9.81f;
-	public float jumpHeight = 5f;
+	public float gravity = 0.5f;
+	public float jumpHeight = 150f;
 	float jumpVelocity;
 	Vector2 velocity = Vector2.zero;
 	Transform player;
