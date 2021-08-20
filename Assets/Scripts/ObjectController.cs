@@ -57,7 +57,7 @@ public class ObjectController : MonoBehaviour
 			return;
 		obstacleSpawner = 0;
 		int i = Random.Range(0, obstacles.Length);
-		if (obstacles[i].transform.position.x > 0)
+		if (obstacles[i].transform.position.x > 10f)
 		{
 			obstacles[i].transform.position = spawnPos;
 			obstacles[i].GetComponent<ObstacleLogic>().OnSpawn();
@@ -69,7 +69,7 @@ public class ObjectController : MonoBehaviour
 	{
 		for (int i = 0; i < objects.Length; i++)
 		{
-			if (objects[i].transform.position.y < -20f)
+			if (objects[i].transform.position.y < -10f)
 			{
 				objects[i].transform.position = despawnPos;
 				Debug.Log("object despawned " + objects[i]);
@@ -77,9 +77,10 @@ public class ObjectController : MonoBehaviour
 		}
 		for (int i = 0; i < obstacles.Length; i++)
 		{
-			if (obstacles[i].transform.position.y < -20f)
+			if (obstacles[i].transform.position.y < -10f)
 			{
 				obstacles[i].transform.position = despawnPos;
+				obstacles[i].GetComponent<ObstacleLogic>().OnDespawn();
 				Debug.Log("object despawned " + obstacles[i]);
 			}
 		}
@@ -100,6 +101,7 @@ public class ObjectController : MonoBehaviour
 		for (int i = 0; i < obstacles.Length; i++)
 		{
 			obstacles[i].transform.position = despawnPos;
+			obstacles[i].GetComponent<ObstacleLogic>().OnDespawn();
 		}
 	}
 }

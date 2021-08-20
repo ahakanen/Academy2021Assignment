@@ -70,6 +70,10 @@ public class ObstacleLogic : MonoBehaviour
 				rotationInvert = 1;
 			}
 		}
+	}
+
+	public void OnDespawn()
+	{
 		if (shouldRebuild == true)
 		{
 			rebuild.Rebuild();
