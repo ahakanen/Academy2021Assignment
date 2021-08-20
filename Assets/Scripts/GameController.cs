@@ -48,30 +48,18 @@ public class GameController : MonoBehaviour
 	{
 		player = GetComponent<Transform>();
 		// derive the initial jump velocity from the desired jump height
-		gravity *= 0.01f;
 		jumpVelocity = Mathf.Sqrt(2 * jumpHeight * gravity);
 		// init player color
 		UpdatePlayerColor();
 	}
 
-    // Update is called once per frame
-    void Update()
+	// update physics with fixed update to make sure gravity is consistent through screen sizes and devices
+    void FixedUpdate()
 	{
 		// apply gravity to player by lowering gravity's worth of velocity
 		if (isDead == false)
 		{
 			velocity.y -= gravity;
-		}
-		if (Input.GetMouseButtonDown(0)) // on left mouse button
-		{
-			if (isDead == false) // if not dead, jump up
-			{
-				velocity.y = jumpVelocity;
-			}
-			else // if dead, reset game
-			{
-				ResetGame();
-			}
 		}
 		// move player based on current velocity
 		Vector2 tmp = player.position;
@@ -90,6 +78,22 @@ public class GameController : MonoBehaviour
 			tmp = player.position;
 			tmp.y = 0;
 			player.position = tmp;
+		}
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
+		if (Input.GetMouseButtonDown(0)) // on left mouse button
+		{
+			if (isDead == false) // if not dead, jump up
+			{
+				velocity.y = jumpVelocity;
+			}
+			else // if dead, reset game
+			{
+				ResetGame();
+			}
 		}
 		UpdateScoreMultiplier();
 	}
