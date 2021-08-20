@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class ObstacleLogic : MonoBehaviour
 {
+	[Header("Variables")]
 	public float rotationSpeed = 25f;
 	public bool shouldOffset;
+	public bool shouldRebuild = false;
 	int rotationInvert = 1;
+	[Header("Dependencies")]
 	public SpriteRenderer firstQuarter;
 	public SpriteRenderer secondQuarter;
 	public SpriteRenderer thirdQuarter;
 	public SpriteRenderer fourthQuarter;
-	public bool shouldRebuild = false;
+	[Header("Rebuild Dependencies")]
 	public ObstacleRebuild rebuild;
+
 	// Start is called before the first frame update
 	void Start()
     {

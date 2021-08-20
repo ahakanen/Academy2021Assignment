@@ -13,26 +13,30 @@ public enum PlayerColor
 
 public class GameController : MonoBehaviour
 {
+	[Header("Physics")]
 	public float gravity = 9.81f;
 	public float jumpHeight = 5f;
 	float jumpVelocity;
 	Vector2 velocity = Vector2.zero;
 	Transform player;
-	public Transform objectControllerTransform;
-	public ObjectController objectController;
+	[Header("Starting Color")]
+	public PlayerColor playerColor = PlayerColor.blue;
 	int score = 0;
 	int bestScore = 0;
 	int scoreMultiplier = 1;
+	[Header("Score")]
 	public int maxScoreMultiplier = 16;
 	public float scoreMultiplierTimerDuration;
 	float scoreMultiplierTimer;
+	[Header("Dependencies")]
+	public Transform objectControllerTransform;
+	public ObjectController objectController;
 	public TextMeshPro scoreText;
 	public TextMeshPro scoreMultiplierText;
 	public TextMeshPro bestScoreText;
 	bool isDead = false;
 	public GameObject playerPickupEffect;
 	public GameObject playerDeathEffect;
-	public PlayerColor playerColor = PlayerColor.blue;
 	public SpriteRenderer spriteRenderer;
 	public AudioSource deathSound;
 	public AudioSource pickupSoundStar;

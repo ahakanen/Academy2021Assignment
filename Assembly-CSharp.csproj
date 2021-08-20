@@ -55,7 +55,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\ObjectController.cs" />
-    <Compile Include="Assets\Scripts\setObstacleColors.cs" />
     <Compile Include="Assets\Scripts\ObstacleLogic.cs" />
     <Compile Include="Assets\Scripts\ObstacleRebuild.cs" />
   </ItemGroup>

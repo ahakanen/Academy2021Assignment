@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class ObjectController : MonoBehaviour
 {
+	[Header("Spawn Frequency")]
 	public float objectSpawnFrequency;
 	public float obstacleSpawnFrequency;
 	float objectSpawner = 0;
 	float obstacleSpawner = 0;
-	public GameObject[] objects;
-	public GameObject[] obstacles;
+	[Header("Spawn and Despawn Positions")]
 	public Vector2 spawnPos = new Vector3(0, 10f);
 	public Vector2 despawnPos = new Vector3(20f, 10f);
+	[Header("Spawnable Objects")]
+	public GameObject[] objects;
+	[Header("Spawnable Obstacles")]
+	public GameObject[] obstacles;
 	bool allowColorSwitcher = true;
 
 	// Start is called before the first frame update
@@ -27,7 +31,6 @@ public class ObjectController : MonoBehaviour
     }
 
 	// spawn object every objectSpawnFrequency of movement by moving one of the possible objects to spawnPos
-
 	public void ObjectSpawn(float movement)
 	{
 		objectSpawner += movement;
@@ -60,7 +63,7 @@ public class ObjectController : MonoBehaviour
 		if (obstacles[i].transform.position.x > 10f)
 		{
 			obstacles[i].transform.position = spawnPos;
-			obstacles[i].GetComponent<ObstacleLogic>().OnSpawn();
+			obstacles[i].GetComponent<ObstacleLogic>().OnSpawn(); // run any OnSpawn logic from the obstacles
 			Debug.Log("obstacle spawned " + obstacles[i]);
 		}
 	}
@@ -80,7 +83,7 @@ public class ObjectController : MonoBehaviour
 			if (obstacles[i].transform.position.y < -10f)
 			{
 				obstacles[i].transform.position = despawnPos;
-				obstacles[i].GetComponent<ObstacleLogic>().OnDespawn();
+				obstacles[i].GetComponent<ObstacleLogic>().OnDespawn(); // run any OnDespawn logic from the obstacles
 				Debug.Log("object despawned " + obstacles[i]);
 			}
 		}

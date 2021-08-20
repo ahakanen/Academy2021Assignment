@@ -965,11 +965,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 50
   shouldOffset: 0
+  shouldRebuild: 0
   firstQuarter: {fileID: 178126180}
   secondQuarter: {fileID: 2088274105}
   thirdQuarter: {fileID: 128200901}
   fourthQuarter: {fileID: 400269642}
-  shouldRebuild: 0
   rebuild: {fileID: 297425393}
 --- !u!1 &324816163
 GameObject:
@@ -1316,15 +1316,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 9.81
   jumpHeight: 250
+  playerColor: 0
+  maxScoreMultiplier: 16
+  scoreMultiplierTimerDuration: 10
   objectControllerTransform: {fileID: 1750951820}
   objectController: {fileID: 1750951821}
-  scoreMultiplierTimerDuration: 10
   scoreText: {fileID: 479546245}
   scoreMultiplierText: {fileID: 1480060007}
   bestScoreText: {fileID: 692373610}
   playerPickupEffect: {fileID: 294540363837302882, guid: 53ecc67773781ea45ad47e42acf7361a, type: 3}
   playerDeathEffect: {fileID: 294540363837302882, guid: a50a861cc6f7aa048adac63bdfc78f0e, type: 3}
-  playerColor: 0
   spriteRenderer: {fileID: 1673574665}
   deathSound: {fileID: 426134752}
   pickupSoundStar: {fileID: 426134751}
@@ -1377,7 +1378,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0fab1f12710d679469ebd85dae304a98, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.503
+  m_Volume: 0.054
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1473,7 +1474,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 803dabc620730d14e9b78a003b083a0d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.222
+  m_Volume: 0.115
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1569,7 +1570,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: edc8e308bd9f1964eb1e8f8973bcd64c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.058
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3522,6 +3523,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpawnFrequency: 7
   obstacleSpawnFrequency: 15
+  spawnPos: {x: 0, y: 10}
+  despawnPos: {x: 20, y: 10}
   objects:
   - {fileID: 68512581}
   - {fileID: 324816163}
@@ -3536,8 +3539,6 @@ MonoBehaviour:
   - {fileID: 4890586294111336758}
   - {fileID: 6155674642197843947}
   - {fileID: 1754512094}
-  spawnPos: {x: 0, y: 10}
-  despawnPos: {x: 20, y: 10}
 --- !u!1 &1754512094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3587,11 +3588,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 63
   shouldOffset: 1
+  shouldRebuild: 1
   firstQuarter: {fileID: 1427664420}
   secondQuarter: {fileID: 2053457753}
   thirdQuarter: {fileID: 1551159564}
   fourthQuarter: {fileID: 1301785702}
-  shouldRebuild: 1
   rebuild: {fileID: 1754512095}
 --- !u!4 &1754512097
 Transform:
@@ -4867,11 +4868,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 50
   shouldOffset: 0
+  shouldRebuild: 0
   firstQuarter: {fileID: 3054317565293890754}
   secondQuarter: {fileID: 3054317565996267807}
   thirdQuarter: {fileID: 3054317565379461475}
   fourthQuarter: {fileID: 3054317565650292972}
-  shouldRebuild: 0
   rebuild: {fileID: 3054317565681838167}
 --- !u!1 &3054317565681838166
 GameObject:
@@ -5287,11 +5288,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 63
   shouldOffset: 1
+  shouldRebuild: 0
   firstQuarter: {fileID: 4890586293924388258}
   secondQuarter: {fileID: 4890586294820055167}
   thirdQuarter: {fileID: 4890586293877608451}
   fourthQuarter: {fileID: 4890586294138667404}
-  shouldRebuild: 0
   rebuild: {fileID: 4890586294111336759}
 --- !u!1 &4890586294111336758
 GameObject:
@@ -5706,11 +5707,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   shouldOffset: 1
+  shouldRebuild: 1
   firstQuarter: {fileID: 6155674642082343807}
   secondQuarter: {fileID: 6155674644005772962}
   thirdQuarter: {fileID: 6155674642029438686}
   fourthQuarter: {fileID: 6155674642304792401}
-  shouldRebuild: 1
   rebuild: {fileID: 6155674642197843948}
 --- !u!4 &6155674642197843945
 Transform:
@@ -6581,11 +6582,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   shouldOffset: 0
+  shouldRebuild: 0
   firstQuarter: {fileID: 6327838113020865036}
   secondQuarter: {fileID: 6327838112775675857}
   thirdQuarter: {fileID: 6327838112973105069}
   fourthQuarter: {fileID: 6327838113235154466}
-  shouldRebuild: 0
   rebuild: {fileID: 6327838113140756121}
 --- !u!1 &6327838113235154465
 GameObject:
@@ -6905,11 +6906,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 63
   shouldOffset: 1
+  shouldRebuild: 0
   firstQuarter: {fileID: 7560720078838606103}
   secondQuarter: {fileID: 7560720077066329290}
   thirdQuarter: {fileID: 7560720079024776374}
   fourthQuarter: {fileID: 7560720078750151993}
-  shouldRebuild: 0
   rebuild: {fileID: 7560720078722895236}
 --- !u!4 &7560720078722895233
 Transform:
