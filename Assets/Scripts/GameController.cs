@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
 		}
 		// move player based on current velocity
 		Vector2 tmp = player.position;
-		tmp.y += velocity.y * Time.deltaTime;
+		tmp.y += velocity.y * Time.fixedDeltaTime;
 		player.position = tmp;
 		if (player.position.y > 0) // if above middle of screen
 		{
