@@ -2,7 +2,7 @@
 
 - Whenever left mouse button is clicked, the player's velocity will be set to an upwards "jump" velocity, and on every frame gravity is added to player's velocity, accelerating the player downwards. Just below the screen's edge is a special obstacle "KillBox" that kills the player on touch.
 - Whenever the player moves above halfway of the screen, player and the "object controller" are nudged down so that the player stays in the middle, while everything else will move down with object controller.
-- Objects and obstacles are both recycled, they are "spawned" by moving them to the middle where they will fall towards the player, and "despawned" by moving them far off the side of the screen.
+- Objects and obstacles are both recycled, they are "spawned" by moving them to the middle where they will fall towards the player, and "despawned" by moving them far off the side of the screen and disabling obstacle gameobjects.
 - Obstacles that also include stars, will be rebuilt every time they are despawned so they can respawn consistently, as picking up the stars will despawn the stars individually and break the obstacle.
 - Obstacles are created from different colors, shuffled randomly every time they are spawned.
 - Obstacles will only register collision (except for the BottomKillBox) if the color of the player is not the same as the color of the colliding obstacle piece.

@@ -27,7 +27,7 @@ public class ObjectController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		ObjectCheckForDespawn();
+		ObjectCheckForDespawn(); // this could be done less often for performance
     }
 
 	// spawn object every objectSpawnFrequency of movement by moving one of the possible objects to spawnPos

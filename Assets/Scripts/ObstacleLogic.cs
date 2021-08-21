@@ -34,6 +34,7 @@ public class ObstacleLogic : MonoBehaviour
 
 	public void OnSpawn()
 	{
+		gameObject.SetActive(true);
 		// set random colors on spawn
 		int i = Random.Range(0, 3);
 		SetColor(firstQuarter, i);
@@ -83,6 +84,7 @@ public class ObstacleLogic : MonoBehaviour
 		{
 			rebuild.Rebuild();
 		}
+		gameObject.SetActive(false);
 	}
 
 	void SetColor(SpriteRenderer quarter, int i)

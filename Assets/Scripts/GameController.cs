@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
 	public AudioSource deathSound;
 	public AudioSource pickupSoundStar;
 	public AudioSource pickupSoundColorSwapper;
-	Vector2 despawnPosPlayer = new Vector2(-20f, 0);
+	Vector2 despawnPosPlayer = new Vector2(-50f, 0);
 
 	// Start is called before the first frame update
 	void Start()
